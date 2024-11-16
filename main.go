@@ -7,10 +7,10 @@ import (
 )
 
 type Member struct {
-	Name      string `json:"name"`
-	StudentID string `json:"studentid"`
-	Image     string `json:"image"`  // Image file name
-	GitHub    string `json:"github"` // GitHub profile link
+	Name      string `json:"Name"`
+	StudentID string `json:"StudentID"`
+	Image     string `json:"Image"`  // Image file name
+	GitHub    string `json:"GitHub"` // GitHub profile link
 }
 
 var members = []Member{

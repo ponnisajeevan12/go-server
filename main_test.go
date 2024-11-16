@@ -7,7 +7,7 @@ import (
 )
 
 func TestGetMemberDetails(t *testing.T) {
-	req, err := http.NewRequest("GET", "/member?name=Alice", nil)
+	req, err := http.NewRequest("GET", "/member?name=Ponni", nil)
 	if err != nil {
 		t.Fatalf("Could not create request: %v", err)
 	}
@@ -20,7 +20,7 @@ func TestGetMemberDetails(t *testing.T) {
 		t.Errorf("Expected status OK; got %v", rec.Code)
 	}
 
-	expectedBody := `{"name":"Alice","role":"Developer","email":"alice@example.com"}`
+	expectedBody := `{"Name":"Ponni","StudentID":"500228122","Image":"po.png","GitHub":"https://github.com/ponnisajeevan12/"}`
 	if rec.Body.String() != expectedBody+"\n" {
 		t.Errorf("Expected body %v; got %v", expectedBody, rec.Body.String())
 	}
