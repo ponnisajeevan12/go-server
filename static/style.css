@@ -1,0 +1,130 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+h1 {
+    color: #4e40a9;
+    margin-bottom: 15px;
+    font-size: 1.4rem; /* Reduced font size for the header */
+}
+
+/* Container */
+.container {
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 350px; /* Reduced max-width for compactness */
+    text-align: center;
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+input[type="text"] {
+    padding: 8px;  /* Reduced padding */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem; /* Smaller font size for input */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem; /* Smaller font size for button */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Result Styles */
+.result {
+    margin-top: 15px;
+}
+
+.card {
+    background: #f9f9f9;
+    padding: 12px; /* Reduced padding */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.card p {
+    margin: 4px 0;
+    font-size: 0.9rem; /* Smaller font size for text */
+}
+
+.member-image {
+    width: 80px; /* Reduced image size */
+    height: 80px; /* Reduced image size */
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 0.9rem; /* Smaller font size for links */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Media Query for Smaller Devices */
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    input[type="text"], button {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .member-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+}
