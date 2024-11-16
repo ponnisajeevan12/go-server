@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Members</title>
+</head>
+<body>
+    <h1>Group Members</h1>
+    <form id="searchForm">
+        <input type="text" id="name" placeholder="Enter member name" required>
+        <button type="submit">Search</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            fetch(`/member?name=${encodeURIComponent(name)}`)
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error("Member not found");
+                })
+                .then(data => {
+                    document.getElementById('result').innerHTML = `
+                        <p><strong>Name:</strong> ${data.name}</p>
+                        <p><strong>Role:</strong> ${data.role}</p>
+                        <p><strong>Email:</strong> ${data.email}</p>
+                    `;
+                })
+                .catch(error => {
+                    document.getElementById('result').textContent = error.message;
+                });
+        });
+    </script>
+</body>
+</html>
